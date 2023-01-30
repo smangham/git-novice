@@ -7,50 +7,44 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/reset.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style>
-    .reveal .sourceCode {  /* see #7635 */
-      overflow: visible;
-    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="version-control-with-git" class="title-slide slide level2">
-<h2>Version Control with Git</h2>
-
-</section>
-
-<section>
-<section id="introduction" class="title-slide slide level2">
-<h2>0. Introduction</h2>
-
-</section>
+<section id="version-control-with-git" class="title-slide slide level2"><h2>Version Control with Git</h2></section>
+<section><section id="introduction" class="title-slide slide level2"><h2>0. Introduction</h2></section>
 <section id="before-we-start" class="slide level3">
 <h3>Before We Start</h3>
 <ul>
-<li>Create an account at <a
-href="https://www.github.com">github.com</a></li>
+<li>Create an account at <a href="https://www.github.com">github.com</a></li>
 <li>Open up a terminal</li>
 </ul>
 </section></section>
-<section>
-<section id="what-is-version-control" class="title-slide slide level2">
-<h2>1. What is Version Control?</h2>
-
-</section>
+<section><section id="what-is-version-control" class="title-slide slide level2"><h2>1. What is Version Control?</h2></section>
 <section id="what-does-it-do" class="slide level3">
 <h3>What Does It Do?</h3>
 <ul>
@@ -71,11 +65,7 @@ href="https://www.github.com">github.com</a></li>
 </ul>
 </div>
 <div style="text-align: right; float: right; width: 45%">
-<figure>
-<img data-src="./images/01-background/revisions.gif"
-alt="Revision management" />
-<figcaption aria-hidden="true">Revision management</figcaption>
-</figure>
+<img data-src="./images/01-background/revisions.gif" title="fig:" alt="Revision management" />
 </div>
 </section>
 <section id="why-use-version-control-1" class="slide level3">
@@ -87,28 +77,19 @@ alt="Revision management" />
 <section id="version-control-tracks-changes" class="slide level3">
 <h3>Version Control Tracks Changes</h3>
 <figure>
-<img data-src="./images/01-background/track_changes.svg"
-alt="Changes are tracked sequentially" />
-<figcaption aria-hidden="true">Changes are tracked
-sequentially</figcaption>
+<img data-src="./images/01-background/track_changes.svg" alt="" /><figcaption>Changes are tracked sequentially</figcaption>
 </figure>
 </section>
 <section id="version-control-tracks-changes-1" class="slide level3">
 <h3>Version Control Tracks Changes</h3>
 <figure>
-<img data-src="./images/01-background/versions.svg"
-alt="Different versions can be saved" />
-<figcaption aria-hidden="true">Different versions can be
-saved</figcaption>
+<img data-src="./images/01-background/versions.svg" alt="" /><figcaption>Different versions can be saved</figcaption>
 </figure>
 </section>
 <section id="version-control-tracks-changes-2" class="slide level3">
 <h3>Version Control Tracks Changes</h3>
 <figure>
-<img data-src="./images/01-background/merge.svg"
-alt="Multiple versions can be merged" />
-<figcaption aria-hidden="true">Multiple versions can be
-merged</figcaption>
+<img data-src="./images/01-background/merge.svg" alt="" /><figcaption>Multiple versions can be merged</figcaption>
 </figure>
 </section>
 <section id="version-control-alternatives" class="slide level3">
@@ -138,23 +119,13 @@ merged</figcaption>
 <table>
 <tr>
 <td>
-<figure>
-<img data-src="./images/01-background/sourcetree.png"
-alt="Sourcetree" />
-<figcaption aria-hidden="true">Sourcetree</figcaption>
-</figure>
+<img data-src="./images/01-background/sourcetree.png" title="fig:" alt="Sourcetree" />
 </td>
 <td>
-<figure>
-<img data-src="./images/01-background/kraken.png" alt="Git Kraken" />
-<figcaption aria-hidden="true">Git Kraken</figcaption>
-</figure>
+<img data-src="./images/01-background/kraken.png" title="fig:" alt="Git Kraken" />
 </td>
 <td>
-<figure>
-<img data-src="./images/01-background/desktop.png" alt="Git Desktop" />
-<figcaption aria-hidden="true">Git Desktop</figcaption>
-</figure>
+<img data-src="./images/01-background/desktop.png" title="fig:" alt="Git Desktop" />
 </td>
 </tr>
 </table>
@@ -164,34 +135,18 @@ alt="Sourcetree" />
 <table>
 <tr>
 <td>
-<figure>
-<img data-src="./images/01-background/integration-pycharm.png"
-alt="PyCharm" />
-<figcaption aria-hidden="true">PyCharm</figcaption>
-</figure>
+<img data-src="./images/01-background/integration-pycharm.png" title="fig:" alt="PyCharm" />
 </td>
 <td>
-<figure>
-<img data-src="./images/01-background/integration-rstudio.png"
-alt="RStudio" />
-<figcaption aria-hidden="true">RStudio</figcaption>
-</figure>
+<img data-src="./images/01-background/integration-rstudio.png" title="fig:" alt="RStudio" />
 </td>
 <td>
-<figure>
-<img data-src="./images/01-background/integration-vscode.png"
-alt="VS Code" />
-<figcaption aria-hidden="true">VS Code</figcaption>
-</figure>
+<img data-src="./images/01-background/integration-vscode.png" title="fig:" alt="VS Code" />
 </td>
 </tr>
 </table>
 </section></section>
-<section>
-<section id="setting-up-git" class="title-slide slide level2">
-<h2>2. Setting Up Git</h2>
-
-</section>
+<section><section id="setting-up-git" class="title-slide slide level2"><h2>2. Setting Up Git</h2></section>
 <section id="key-commands" class="slide level3">
 <h3>Key Commands</h3>
 <ul>
@@ -201,25 +156,18 @@ alt="VS Code" />
 <section id="setting-up-github" class="slide level3">
 <h3>Setting Up GitHub</h3>
 <ul>
-<li>Sign up to GitHub: <a
-href="https://github.com/signup">https://github.com/signup</a></li>
+<li>Sign up to GitHub: <a href="https://github.com/signup">https://github.com/signup</a></li>
 <li>Open a terminal</li>
 <li><code>ssh-keygen -t ed25519</code></li>
 <li><code>cat ~/.ssh/id_ed25519.pub</code></li>
-<li>Copy the contents to GitHub: <a
-href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a></li>
+<li>Copy the contents to GitHub: <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a></li>
 </ul>
 </section></section>
-<section>
-<section id="creating-a-repository" class="title-slide slide level2">
-<h2>3. Creating a Repository</h2>
-
-</section>
+<section><section id="creating-a-repository" class="title-slide slide level2"><h2>3. Creating a Repository</h2></section>
 <section id="github-template" class="slide level3">
 <h3>GitHub Template</h3>
 <ul>
-<li>Go to <a
-href="https://github.com/Southampton-RSG-Training/git-novice-template">https://github.com/Southampton-RSG-Training/git-novice-template</a></li>
+<li>Go to <a href="https://github.com/Southampton-RSG-Training/git-novice-template">https://github.com/Southampton-RSG-Training/git-novice-template</a></li>
 <li>“Use This Template”</li>
 <li>Name it <code>climate-analysis</code></li>
 </ul>
@@ -230,11 +178,7 @@ href="https://github.com/Southampton-RSG-Training/git-novice-template">https://g
 <li><code>git clone git@github.com:yourname/climate-analysis</code></li>
 </ul>
 </section></section>
-<section>
-<section id="tracking-changes" class="title-slide slide level2">
-<h2>4. Tracking Changes</h2>
-
-</section>
+<section><section id="tracking-changes" class="title-slide slide level2"><h2>4. Tracking Changes</h2></section>
 <section id="key-commands-1" class="slide level3">
 <h3>Key Commands</h3>
 <ul>
@@ -245,9 +189,7 @@ href="https://github.com/Southampton-RSG-Training/git-novice-template">https://g
 <section id="adding-committing" class="slide level3">
 <h3>Adding &amp; Committing</h3>
 <figure>
-<img data-src="./images/04-changes/add.svg"
-alt="Repository structure" />
-<figcaption aria-hidden="true">Repository structure</figcaption>
+<img data-src="./images/04-changes/add.svg" alt="" /><figcaption>Repository structure</figcaption>
 </figure>
 </section>
 <section id="history" class="slide level3">
@@ -260,23 +202,14 @@ alt="Repository structure" />
 <section id="differences" class="slide level3">
 <h3>Differences</h3>
 <figure>
-<img data-src="./images/04-changes/diff.svg"
-alt="Types of differencing" />
-<figcaption aria-hidden="true">Types of differencing</figcaption>
+<img data-src="./images/04-changes/diff.svg" alt="" /><figcaption>Types of differencing</figcaption>
 </figure>
 </section></section>
-<section>
-<section id="exploring-history" class="title-slide slide level2">
-<h2>5. Exploring History</h2>
-
-</section>
+<section><section id="exploring-history" class="title-slide slide level2"><h2>5. Exploring History</h2></section>
 <section id="more-differences" class="slide level3">
 <h3>More Differences</h3>
 <figure>
-<img data-src="./images/05-history/diff.svg"
-alt="Differences of specific commits" />
-<figcaption aria-hidden="true">Differences of specific
-commits</figcaption>
+<img data-src="./images/05-history/diff.svg" alt="" /><figcaption>Differences of specific commits</figcaption>
 </figure>
 </section>
 <section id="restoring-files" class="slide level3">
@@ -288,48 +221,30 @@ commits</figcaption>
 <section id="restoring-files-1" class="slide level3">
 <h3>Restoring Files</h3>
 <figure>
-<img data-src="./images/05-history/restore.svg"
-alt="Restore files to specific commits" />
-<figcaption aria-hidden="true">Restore files to specific
-commits</figcaption>
+<img data-src="./images/05-history/restore.svg" alt="" /><figcaption>Restore files to specific commits</figcaption>
 </figure>
 </section></section>
-<section>
-<section id="remote-repositories" class="title-slide slide level2">
-<h2>6. Remote Repositories</h2>
-
-</section>
+<section><section id="remote-repositories" class="title-slide slide level2"><h2>6. Remote Repositories</h2></section>
 <section id="local-repo" class="slide level3">
 <h3>Local Repo</h3>
 <center>
 <div style="width:50%;">
-<figure>
-<img data-src="./images/06-remote/local.png"
-alt="Local repository workflows" />
-<figcaption aria-hidden="true">Local repository workflows</figcaption>
-</figure>
+<img data-src="./images/06-remote/local.png" title="fig:" alt="Local repository workflows" />
 </div>
 </center>
 </section>
 <section id="remote-backups" class="slide level3">
 <h3>Remote Backups</h3>
 <center>
-<div style="width: 80%">
-<figure>
-<img data-src="./images/06-remote/mountbatten-fire.jpg"
-alt="Mountbatten Fire" />
-<figcaption aria-hidden="true">Mountbatten Fire</figcaption>
-</figure>
+<div style="width: 65%">
+<img data-src="./images/06-remote/mountbatten-fire.jpg" title="fig:" alt="Mountbatten Fire" />
 </div>
 </center>
 </section>
 <section id="collaboration" class="slide level3">
 <h3>Collaboration</h3>
 <figure>
-<img data-src="./images/06-remote/remote.svg"
-alt="Collaboration via remote repository" />
-<figcaption aria-hidden="true">Collaboration via remote
-repository</figcaption>
+<img data-src="./images/06-remote/remote.svg" alt="" /><figcaption>Collaboration via remote repository</figcaption>
 </figure>
 </section>
 <section id="remote-repositories-1" class="slide level3">
@@ -341,30 +256,18 @@ repository</figcaption>
 </section>
 <section id="remote-commands" class="slide level3">
 <h3>Remote Commands</h3>
-<div style="width: 50%">
-<figure>
-<img data-src="./images/06-remote/remote.png" alt="Remote workflows" />
-<figcaption aria-hidden="true">Remote workflows</figcaption>
-</figure>
+<center>
+<div style="width: 60%">
+<img data-src="./images/06-remote/remote.png" title="fig:" alt="Remote workflows" />
 </div>
+</center>
 </section></section>
-<section id="branches" class="title-slide slide level2">
-<h2>7. Branches</h2>
-
-</section>
-
-<section>
-<section id="feature-branch" class="title-slide slide level2">
-<h2>Feature-branch</h2>
-<div style="width: 80%">
+<section id="branches" class="title-slide slide level2"><h2>7. Branches</h2></section>
+<section><section id="feature-branch" class="title-slide slide level2"><h2>Feature-branch</h2><div style="width: 80%">
 <figure>
-<img data-src="./images/06-remote/git-feature-branch.svg"
-alt="Branching off a master branch" />
-<figcaption aria-hidden="true">Branching off a master
-branch</figcaption>
+<img data-src="./images/06-remote/git-feature-branch.svg" alt="" /><figcaption>Branching off a master branch</figcaption>
 </figure>
-</div>
-</section>
+</div></section>
 <section id="creating-branches" class="slide level3">
 <h3>Creating branches</h3>
 <ul>
@@ -388,11 +291,7 @@ branch</figcaption>
 <li><code>git merge dev</code></li>
 </ul>
 </section></section>
-<section>
-<section id="ignoring-things" class="title-slide slide level2">
-<h2>8. Ignoring Things</h2>
-
-</section>
+<section><section id="ignoring-things" class="title-slide slide level2"><h2>8. Ignoring Things</h2></section>
 <section id="key-files" class="slide level3">
 <h3>Key Files</h3>
 <ul>
@@ -403,163 +302,21 @@ branch</figcaption>
     </div>
   </div>
 
-  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
-
-  <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://revealjs.com/config/
+      // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        // Display controls in the bottom right corner
-        controls: true,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: false,
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
         // Push each slide change to the browser history
-        history: false,
+        history: true,
 
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: true,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'default',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: true,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        // reveal.js plugins
-        plugins: [
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
