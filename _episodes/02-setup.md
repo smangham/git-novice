@@ -15,6 +15,7 @@ keypoints:
 - "GitHub needs an SSH key to allow access"
 ---
 
+
 > ## Prerequisites
 >
 > In this lesson we use Git from the Bash Shell.

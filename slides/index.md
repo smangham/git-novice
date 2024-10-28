@@ -69,6 +69,11 @@
 
 <table>
   <tr>
+    <th>Sourcetree</th>
+    <th>Git Kraken</th>
+    <th>Git Desktop</th>
+  </tr>
+  <tr>
     <td>![Sourcetree](./images/01-background/sourcetree.png)</td>
     <td>![Git Kraken](./images/01-background/kraken.png)</td>
     <td>![Git Desktop](./images/01-background/desktop.png)</td>
@@ -78,6 +83,11 @@
 ### GUIs
 
 <table>
+  <tr>
+    <th>PyCharm</th>
+    <th>RStudio</th>
+    <th>VS Code</th>
+  </tr>
   <tr>
     <td>![PyCharm](./images/01-background/integration-pycharm.png)</td>
     <td>![RStudio](./images/01-background/integration-rstudio.png)</td>
@@ -126,7 +136,11 @@
 
 ### Adding & Committing
 
+<center>
+<div style="width: 60%">
 ![Repository structure](./images/04-changes/add.svg)
+</div>
+</center>
 
 
 ### History
@@ -137,8 +151,11 @@
 
 ### Differences
 
+<center>
+<div style="width: 60%">
 ![Types of differencing](./images/04-changes/diff.svg)
-
+</div>
+</center>
 
 
 ## 5. Exploring History
@@ -156,7 +173,11 @@
 
 ### Restoring Files
 
+<center>
+<div style="width: 70%">
 ![Restore files to specific commits](./images/05-history/restore.svg)
+</div>
+</center>
 
 
 ## 6. Remote Repositories
@@ -166,10 +187,9 @@
 ### Local Repo
 
 <center>
-
 <div style="width:50%;">![Local repository workflows](./images/06-remote/local.png)</div>
-
 </center>
+
 
 ### Remote Backups
 
@@ -200,11 +220,14 @@
 ## 7. Branches
 
 
-## Feature-branch
+### Feature-branch
 
+<center>
 <div style="width: 80%">
 ![Branching off a master branch](./images/06-remote/git-feature-branch.svg)
 </div>
+</center>
+
 
 ### Creating branches
 
