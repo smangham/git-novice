@@ -336,16 +336,32 @@ VS Code
 <ul>
 <li><code>git push</code></li>
 </ul>
-</section></section>
-<section id="conflict-creation" class="title-slide slide level2"><h2>Conflict Creation</h2><p><strong>Local:</strong> - <code>nano README.md</code> - Add your email to the end - <code>git commit -am "Your message"</code></p>
-<p><strong>Remote:</strong> - Go to your repo on GitHub - Edit <code>README.md</code> to add install info to the end - Commit directly to <code>main</code></p></section>
-<section><section id="conflict-resolution" class="title-slide slide level1"><h1>Conflict Resolution</h1><ul>
+</section>
+<section id="conflict-creation" class="slide level3">
+<h3>Conflict Creation</h3>
+<p><strong>Local:</strong></p>
+<ul>
+<li><code>nano README.md</code></li>
+<li>Add your email to the end</li>
+<li><code>git commit -am "Your message"</code></li>
+</ul>
+<p><strong>Remote:</strong></p>
+<ul>
+<li>Go to your repo on GitHub</li>
+<li>Edit <code>README.md</code> to add install info to the end</li>
+<li>Commit directly to <code>main</code></li>
+</ul>
+</section>
+<section id="conflict-resolution" class="slide level3">
+<h3>Conflict Resolution</h3>
+<ul>
 <li><code>git pull</code></li>
 <li><code>git config pull.rebase false</code> if it fails</li>
 <li><code>nano README.md</code> and remove the <code>&lt;&lt;&lt;</code>/<code>===</code>/<code>&gt;&gt;&gt;</code></li>
 <li><code>git commit -am "Your message"</code></li>
 <li><code>git push</code></li>
-</ul></section>
+</ul>
+</section>
 <section id="remote-commands" class="slide level3">
 <h3>Remote Commands</h3>
 <center>
@@ -353,7 +369,7 @@ VS Code
 <img data-src="./images/06-remote/remote.png" title="fig:" alt="Remote workflows" />
 </div>
 </center>
-</section>
+</section></section>
 <section><section id="branches" class="title-slide slide level2"><h2>7. Branches</h2></section>
 <section id="feature-branch" class="slide level3">
 <h3>Feature-branch</h3>
@@ -368,34 +384,64 @@ VS Code
 <section id="creating-branches" class="slide level3">
 <h3>Creating branches</h3>
 <ul>
+<li><code>git branch</code></li>
 <li><code>git branch dev</code></li>
-<li><code>git checkout dev</code></li>
+<li><code>git switch dev</code></li>
 </ul>
 </section>
 <section id="branch-files" class="slide level3">
 <h3>Branch files</h3>
 <ul>
-<li>Create <code>rainfall_conversion.py</code></li>
+<li><code>nano rainfall_conversion.py</code></li>
 <li><code>git add rainfall_conversion.py</code></li>
-<li><code>git commit -m</code></li>
+<li><code>git commit -m "Your message"</code></li>
+<li><code>ls</code></li>
+<li><code>git log</code></li>
 </ul>
 </section>
-<section id="pushing-merging" class="slide level3">
-<h3>Pushing &amp; merging</h3>
+<section id="switching-branches" class="slide level3">
+<h3>Switching Branches</h3>
 <ul>
+<li><code>git switch main</code></li>
+<li><code>ls</code></li>
+<li><code>git log</code></li>
+</ul>
+</section>
+<section id="pushing-branches" class="slide level3">
+<h3>Pushing Branches</h3>
+<ul>
+<li><code>git switch dev</code></li>
 <li><code>git push origin dev</code></li>
+<li><code>git config --global push.autoSetupRemote true</code></li>
+</ul>
+</section>
+<section id="merging-branches" class="slide level3">
+<h3>Merging Branches</h3>
+<ul>
 <li><code>git switch main</code></li>
 <li><code>git merge dev</code></li>
 </ul>
 </section></section>
 <section><section id="ignoring-things" class="title-slide slide level2"><h2>8. Ignoring Things</h2></section>
-<section id="key-files" class="slide level3">
-<h3>Key Files</h3>
+<section id="create-temporary-files" class="slide level3">
+<h3>Create Temporary Files</h3>
 <ul>
-<li><code>.gitignore</code></li>
-<li><code>.gitkeep</code></li>
+<li><code>git switch dev</code></li>
+<li><code>mkdir results</code></li>
+<li><code>touch a.dat b.dat results/a.out results/b.out</code></li>
+<li><code>git status</code></li>
 </ul>
-</section></section></section>
+</section>
+<section id="create-git-ignore" class="slide level3">
+<h3>Create Git Ignore</h3>
+<ul>
+<li><code>nano .gitignore</code></li>
+<li>Lines for <code>*.dat</code> and <code>results/</code></li>
+<li><code>git status</code></li>
+<li><code>git add .gitignore</code></li>
+<li><code>git commit -m "Your message"</code></li>
+</ul>
+</section></section>
     </div>
   </div>
 
