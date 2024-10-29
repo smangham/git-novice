@@ -197,20 +197,23 @@ VS Code
 <li>Name it <code>climate-analysis</code></li>
 </ul>
 </section>
-<section id="downloading-a-repository" class="slide level3">
-<h3>Downloading a Repository</h3>
+<section id="key-commands-1" class="slide level3">
+<h3>Key Commands</h3>
 <ul>
 <li><code>git clone git@github.com:yourname/climate-analysis</code></li>
+<li><code>cd climate-analysis</code></li>
+<li><code>ls -a</code></li>
+<li><code>git status</code></li>
 </ul>
 </section></section>
 <section><section id="tracking-changes" class="title-slide slide level2"><h2>4. Tracking Changes</h2></section>
-<section id="key-commands-1" class="slide level3">
+<section id="key-commands-2" class="slide level3">
 <h3>Key Commands</h3>
 <ul>
 <li><code>nano README.md</code></li>
 <li><code>git add README.md</code></li>
 <li><code>git status</code></li>
-<li><code>git commit -m "Your commit message"</code></li>
+<li><code>git commit -m "Your message"</code></li>
 </ul>
 </section>
 <section id="adding-committing" class="slide level3">
@@ -223,7 +226,7 @@ VS Code
 </div>
 </center>
 </section>
-<section id="key-commands-2" class="slide level3">
+<section id="key-commands-3" class="slide level3">
 <h3>Key Commands</h3>
 <ul>
 <li><code>git status</code></li>
@@ -231,14 +234,15 @@ VS Code
 <li><code>nano climate_analysis.py</code></li>
 <li><code>git diff</code></li>
 <li><code>git add climate_analysis.py</code></li>
-<li><code>git commit -m "Your commit message"</code></li>
+<li><code>git commit -m "Your message"</code></li>
 </ul>
 </section>
 <section id="challenge" class="slide level3">
 <h3>Challenge</h3>
 <ul>
-<li>Use <code>nano</code> to add <code># TODO: Add rainfall processing code</code> to the end of <code>climate_analysis.py</code></li>
-<li>Commit the change to the repository.</li>
+<li>Use <code>nano</code> to edit <code>climate_analysis.py</code></li>
+<li>Add “<code># TODO: Add rainfall processing code</code>” to the end</li>
+<li>Commit the change to the repository</li>
 </ul>
 </section>
 <section id="solution" class="slide level3">
@@ -247,11 +251,11 @@ VS Code
 <li><code>nano climate_analysis.py</code></li>
 <li><code>git diff</code></li>
 <li><code>git add climate_analysis.py</code></li>
-<li><code>git commit -m "Your commit message"</code></li>
+<li><code>git commit -m "Your message"</code></li>
 </ul>
 </section></section>
 <section><section id="exploring-history" class="title-slide slide level2"><h2>5. Exploring History</h2></section>
-<section id="key-commands-3" class="slide level3">
+<section id="key-commands-4" class="slide level3">
 <h3>Key Commands</h3>
 <ul>
 <li><code>git log</code></li>
@@ -262,7 +266,8 @@ VS Code
 <section id="challenge-1" class="slide level3">
 <h3>Challenge</h3>
 <ul>
-<li>Use the first 7 characters of a commit ID to get a summary of the changes to <code>climate_analysis.py</code> since the initial commit.</li>
+<li>Get the ID of your first commit</li>
+<li>Get a summary of the changes to <code>climate_analysis.py</code> since then</li>
 </ul>
 </section>
 <section id="solution-1" class="slide level3">
@@ -279,7 +284,7 @@ VS Code
 <img data-src="./images/05-history/diff.svg" alt="" /><figcaption>Differences of specific commits</figcaption>
 </figure>
 </section>
-<section id="key-commands-4" class="slide level3">
+<section id="key-commands-5" class="slide level3">
 <h3>Key Commands</h3>
 <ul>
 <li><code>rm climate_analysis.py</code></li>
@@ -326,13 +331,21 @@ VS Code
 <img data-src="./images/06-remote/remote.svg" alt="" /><figcaption>Collaboration via remote repository</figcaption>
 </figure>
 </section>
-<section id="remote-repositories-1" class="slide level3">
-<h3>Remote Repositories</h3>
+<section id="key-commands-6" class="slide level3">
+<h3>Key Commands</h3>
 <ul>
 <li><code>git push</code></li>
-<li><code>git pull</code></li>
 </ul>
-</section>
+</section></section>
+<section id="conflict-creation" class="title-slide slide level2"><h2>Conflict Creation</h2><p><strong>Local:</strong> - <code>nano README.md</code> - Add your email to the end - <code>git commit -am "Your message"</code></p>
+<p><strong>Remote:</strong> - Go to your repo on GitHub - Edit <code>README.md</code> to add install info to the end - Commit directly to <code>main</code></p></section>
+<section><section id="conflict-resolution" class="title-slide slide level1"><h1>Conflict Resolution</h1><ul>
+<li><code>git pull</code></li>
+<li><code>git config pull.rebase false</code> if it fails</li>
+<li><code>nano README.md</code> and remove the <code>&lt;&lt;&lt;</code>/<code>===</code>/<code>&gt;&gt;&gt;</code></li>
+<li><code>git commit -am "Your message"</code></li>
+<li><code>git push</code></li>
+</ul></section>
 <section id="remote-commands" class="slide level3">
 <h3>Remote Commands</h3>
 <center>
@@ -340,7 +353,7 @@ VS Code
 <img data-src="./images/06-remote/remote.png" title="fig:" alt="Remote workflows" />
 </div>
 </center>
-</section></section>
+</section>
 <section><section id="branches" class="title-slide slide level2"><h2>7. Branches</h2></section>
 <section id="feature-branch" class="slide level3">
 <h3>Feature-branch</h3>
@@ -382,7 +395,7 @@ VS Code
 <li><code>.gitignore</code></li>
 <li><code>.gitkeep</code></li>
 </ul>
-</section></section>
+</section></section></section>
     </div>
   </div>
 
