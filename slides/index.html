@@ -43,6 +43,13 @@
 <li>Create an account at <a href="https://www.github.com">github.com</a></li>
 <li>Open up a terminal</li>
 </ul>
+</section>
+<section id="how-this-works" class="slide level3">
+<h3>How This Works</h3>
+<ul>
+<li>I’ll work through on my machine and you follow along</li>
+<li></li>
+</ul>
 </section></section>
 <section><section id="what-is-version-control" class="title-slide slide level2"><h2>1. What is Version Control?</h2></section>
 <section id="what-does-it-do" class="slide level3">
@@ -50,7 +57,7 @@
 <ul>
 <li>Tracks <strong>changes</strong> to files</li>
 <li>Any file can be tracked</li>
-<li>Text (.txt, .csv, .py, .c, .R, etc.) works best
+<li>Text (<code>.txt</code>, <code>.csv</code>, <code>.py</code>, <code>.c</code>, <code>.R</code>, etc.) works best
 <ul>
 <li>These allow smart <em>diff</em> / <em>merge</em> etc.</li>
 </ul></li>
@@ -71,6 +78,7 @@
 <section id="why-use-version-control-1" class="slide level3">
 <h3>Why Use Version Control?</h3>
 <ul>
+<li>Sharing</li>
 <li>Teamwork</li>
 </ul>
 </section>
@@ -177,15 +185,35 @@ VS Code
 <li><code>git config --global core.editor "nano -w"</code></li>
 </ul>
 </section>
+<section id="ssh-key-security" class="slide level3">
+<h3>SSH Key Security</h3>
+<figure>
+<img data-src="./images/02-setup/ssh_key_pairs.png" alt="" /><figcaption>Secure alternative to 2FA</figcaption>
+</figure>
+</section>
 <section id="setting-up-github" class="slide level3">
 <h3>Setting Up GitHub</h3>
 <ul>
 <li>Sign up to GitHub: <a href="https://github.com/signup">https://github.com/signup</a></li>
 <li>Open a terminal</li>
 <li><code>ssh-keygen -t ed25519</code></li>
-<li>Yes to everything</li>
+<li>Accept all the defaults</li>
 <li><code>cat ~/.ssh/id_ed25519.pub</code></li>
-<li>Copy the contents to GitHub: <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a></li>
+<li>Copy the contents to GitHub: <a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new</a>
+<ul>
+<li><em>Or use your own if you have one already</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="checkpoint" class="slide level3">
+<h3>Checkpoint</h3>
+<ul>
+<li>Everyone have their SSH key on GitHub?</li>
+<li><strong>Common Problems:</strong>
+<ul>
+<li>Copying from the terminal - try <strong>right-click -&gt; copy</strong></li>
+<li>Changed the save location for <code>ssh-keygen</code></li>
+</ul></li>
 </ul>
 </section></section>
 <section><section id="creating-a-repository" class="title-slide slide level2"><h2>3. Creating a Repository</h2></section>
@@ -201,9 +229,22 @@ VS Code
 <h3>Key Commands</h3>
 <ul>
 <li><code>git clone git@github.com:yourname/climate-analysis</code></li>
+<li>Accept GitHub’s SSH key</li>
 <li><code>cd climate-analysis</code></li>
 <li><code>ls -a</code></li>
 <li><code>git status</code></li>
+</ul>
+</section>
+<section id="checkpoint-1" class="slide level3">
+<h3>Checkpoint</h3>
+<ul>
+<li>Everyone managed to copy and download the template?</li>
+<li><strong>Common Problems:</strong>
+<ul>
+<li>Typo in the command (e.g. missing the <code>:</code>)</li>
+<li>SSH key hasn’t been set up</li>
+<li>Not accepting GitHub’s SSH key</li>
+</ul></li>
 </ul>
 </section></section>
 <section><section id="tracking-changes" class="title-slide slide level2"><h2>4. Tracking Changes</h2></section>
@@ -290,6 +331,7 @@ VS Code
 <li><code>rm climate_analysis.py</code></li>
 <li><code>git status</code></li>
 <li><code>git restore climate_analysis.py</code></li>
+<li><em>If <code>restore</code> doesn’t work, try <code>checkout</code></em></li>
 </ul>
 </section>
 <section id="advanced-use" class="slide level3">
@@ -358,6 +400,7 @@ VS Code
 <li><code>git pull</code></li>
 <li><code>git config pull.rebase false</code> if it fails</li>
 <li><code>nano README.md</code> and remove the <code>&lt;&lt;&lt;</code>/<code>===</code>/<code>&gt;&gt;&gt;</code></li>
+<li><code>git add README.md</code></li>
 <li><code>git commit -am "Your message"</code></li>
 <li><code>git push</code></li>
 </ul>
@@ -387,6 +430,7 @@ VS Code
 <li><code>git branch</code></li>
 <li><code>git branch dev</code></li>
 <li><code>git switch dev</code></li>
+<li><em>If <code>switch</code> doesn’t work, try <code>checkout</code></em></li>
 </ul>
 </section>
 <section id="branch-files" class="slide level3">
