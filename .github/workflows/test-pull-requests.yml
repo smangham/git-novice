@@ -81,4 +81,5 @@ jobs:
             -s -t revealjs
             -o slides/index.html slides/index.md
             -V theme=black
+            -V revealjs-url=slides/.
             --slide-level=3
